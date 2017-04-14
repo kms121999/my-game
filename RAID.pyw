@@ -32,3 +32,22 @@ BLUE_IMG = pygame.transform.scale(pygame.image.load(r'data\core\images\units\blu
 T1 = r'data\core\music\FreedomDance.wav'
 T2 = r'data\core\music\LoopyMusic.wav'
 SE_HIT = pygame.mixer.Sound(r'data\core\sounds\hit.ogg')
+
+'''
+#Create functions
+def StartupScr():
+  '''
+  StartupScreen
+  '''
+  while True:
+    #print everthing and get events to return function
+
+def MainMenue():
+def Game():
+def Settings():
+def Credits():
+
+StartUpScr()
+while True:
+  MainMenue()
+'''
