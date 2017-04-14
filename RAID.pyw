@@ -4,17 +4,28 @@ import pygame, sys, random
 #Initiate Pygame
 pygame.init()
 
-#Set global varialbles
+#Set window size
 THIN_WINDOW = (400, 500)
 WIDE_WINDOW = (1024, 600)
+DEFAULT = WIDE_WINDOW #Make a setting to set a default for this. Default settings would be accessed in another file.
+window_setting = DEFAULT
 
-#Create display window
-window = pygame.display.set_mode(WIDE_WINDOW)
+#Create and set up display window
+ICON = pygame.image.load(r'data\core\images\other\game_icon.png')
+window = pygame.display.set_mode(window_setting) #Would Fullscreen be a possible default? How would I do this?
+pygame.display.set_icon(ICON)
+pygame.display.set_caption("RAID!", "RAID!")
 
 #Load, transform, and convert images
-ICON = pygame.image.load(r'data\core\images\other\game_icon.png')
-BACK_BUTTON = pygame.transform.scale((pygame.image.load(r'data\core\images\other\back_button.png')),
-                                     (int(round(WIDE_WINDOW[1]*0.07291)), int(round(WIDE_WINDOW[1]*0.07291)))).convert()
-RED_IMG = pygame.image.load(r'data\core\images\units\red_man.png')
-BLUE_IMG = pygame.image.load(r'data\core\images\units\blue_man.png')
-SPAWN_ARROW = pygame.image.load(r'data\core\images\other\spawn_arrow.png')
+#Symbols
+BACK_BUTTON = pygame.transform.scale(pygame.image.load(r'data\core\images\other\back_button.png'),
+                                     (int(round(window_setting[1]*0.07291)), int(round(window_setting[1]*0.07291)))).convert()
+SPAWN_ARROW = pygame.transform.scale(pygame.image.load(r'data\core\images\other\spawn_arrow.png'),
+                                     (int(round(window_setting[1]*0.1376*0.5672*1.3158)), int(round(window_setting[1]*0.1376*0.5672)))).convert()
+#Units
+RED_IMG = pygame.transform.scale(pygame.image.load(r'data\core\images\units\red_man.png'),
+                                 (int(round(window_setting[1]*0.1376*0.6418)), int(round(window_setting[1]*0.1376)))).convert()
+BLUE_IMG = pygame.transform.scale(pygame.image.load(r'data\core\images\units\blue_man.png'),
+                                (int(round(window_setting[1]*0.1376*0.6418)), int(round(window_setting[1]*0.1376)))).convert()
+
+#Load audio
