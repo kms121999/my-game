@@ -28,4 +28,7 @@ RED_IMG = pygame.transform.scale(pygame.image.load(r'data\core\images\units\red_
 BLUE_IMG = pygame.transform.scale(pygame.image.load(r'data\core\images\units\blue_man.png'),
                                 (int(round(window_setting[1]*0.1376*0.6418)), int(round(window_setting[1]*0.1376)))).convert()
 
-#Load audio
+#Prepare audio
+T1 = r'data\core\music\FreedomDance.wav'
+T2 = r'data\core\music\LoopyMusic.wav'
+SE_HIT = pygame.mixer.Sound(r'data\core\sound_effects\hit.ogg')
