@@ -48,3 +48,4 @@ StartUpScr()
 while True:
   MainMenue()
 '''
+raise ValueError
