@@ -13,8 +13,8 @@ FONTM = pygame.font.SysFont(None, 35)
 FONTS = pygame.font.SysFont(None, 25)
 FONTXS = pygame.font.SysFont(None, 15)
 #640, 480
-WINDOWWIDTH = 1280
-WINDOWHEIGHT = 800
+WINDOWWIDTH = 800
+WINDOWHEIGHT = 700
 #blocks
 BACKBOX = pygame.Rect(20, WINDOWHEIGHT - 55, 35, 35)
 back = pygame.image.load(r'data\core\images\other\pback.png')
