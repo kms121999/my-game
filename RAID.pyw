@@ -36,9 +36,6 @@ SE_HIT = pygame.mixer.Sound(r'data\core\sounds\hit.ogg')
 '''
 #Create functions
 def StartupScr():
-  '''
-  StartupScreen
-  '''
   while True:
     #print everthing and get events to return function
 
